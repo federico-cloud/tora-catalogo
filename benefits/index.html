@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TORA — Red de Beneficios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink: #ff3eb5;
+        --white: #ffffff;
+        --dark: #1a1a1a;
+        --font-main: "Arial", "Helvetica Neue", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        overflow-x: clip;
+      }
+
+      body {
+        font-family: var(--font-main);
+        background: var(--white);
+        color: var(--dark);
+      }
+
+      /* ── HERO ─────────────────────────────────────────── */
+      .hero {
+        position: relative;
+        height: 300px;
+        background: url("assets/fondo2.png") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 64px 20px 56px;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(72px, 13vw, 120px);
+        color: var(--pink);
+        letter-spacing: 1px;
+        font-weight: 600;
+        line-height: 1;
+        text-shadow:
+          0 0 6px rgba(255, 62, 181, 0.1),
+          0 0 15px rgba(255, 62, 181, 0.1),
+          0 0 30px rgba(255, 62, 181, 0.1),
+          0 4px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-subtitle {
+        font-family: "Oswald", sans-serif;
+        font-size: clamp(26px, 5vw, 46px);
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: clamp(3px, 1vw, 6px);
+        margin-top: 6px;
+        text-transform: uppercase;
+      }
+
+      .hero-tagline {
+        font-family: "Oswald", sans-serif;
+        font-size: clamp(16px, 2.2vw, 22px);
+        color: rgba(255, 255, 255, 0.82);
+        margin-top: 8px;
+        font-style: normal;
+        letter-spacing: 0.2px;
+        text-shadow:
+          0 0 5px rgb(255, 255, 255, 0.3),
+          0 0 10px rgba(255, 255, 255, 0.3),
+          0 0 20px rgba(255, 255, 255, 0.3),
+          0 4px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ── FILTERS ──────────────────────────────────────── */
+      .filters {
+        background: var(--white);
+        display: flex;
+        justify-content: center;
+
+        gap: 6px;
+        padding: 16px 12px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .filter-btn {
+        padding: 7px 10px;
+        border-radius: 50px;
+        border: 1px solid #ccc;
+        background: transparent;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        color: #666;
+        transition:
+          background 0.18s,
+          border-color 0.18s,
+          color 0.18s;
+        font-family: var(--font-main);
+      }
+
+      .filter-btn.active {
+        background: #ccc;
+        color: #666;
+        font-weight: 700;
+      }
+
+      /* ── GRID ─────────────────────────────────────────── */
+      .benefits-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 36px 40px 60px;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      /* ── CARDS ────────────────────────────────────────── */
+      .card {
+        border-radius: 0;
+        overflow: hidden;
+        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.15);
+        position: relative;
+        transition:
+          transform 0.22s,
+          box-shadow 0.22s;
+        cursor: pointer;
+        background: #eee;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* TORA badge */
+      .tora-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--pink);
+        color: var(--white);
+        font-size: 8.5px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        padding: 5px 12px;
+        border-radius: 0;
+        text-transform: uppercase;
+        box-shadow: 0 2px 6px rgba(240, 4, 127, 0.4);
+        z-index: 1;
+      }
+
+      /* hidden state for filter */
+      .card.hidden {
+        display: none;
+      }
+
+      /* ── LIGHTBOX ─────────────────────────────────────── */
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.82);
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .lightbox.open {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        display: block;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        animation: lb-in 0.22s ease;
+      }
+
+      @keyframes lb-in {
+        from {
+          opacity: 0;
+          transform: scale(0.92);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .lightbox-close {
+        position: fixed;
+        top: 20px;
+        right: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 36px;
+        line-height: 1;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.15s;
+      }
+
+      .lightbox-close:hover {
+        opacity: 1;
+      }
+
+      .lb-nav {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 48px;
+        line-height: 1;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.15s;
+        padding: 0 16px;
+        user-select: none;
+      }
+
+      .lb-nav:hover { opacity: 1; }
+      .lb-nav:disabled { opacity: 0.15; cursor: default; }
+
+      #lb-prev { left: 8px; }
+      #lb-next { right: 8px; }
+
+      /* ── RESPONSIVE ───────────────────────────────────── */
+      @media (max-width: 768px) {
+        .benefits-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+        .card-brand {
+          font-size: 16px;
+        }
+        .discount-num {
+          font-size: 42px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          padding: 48px 16px 40px;
+          max-height: 280px;
+        }
+        .benefits-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .benefits-section {
+          padding: 12px;
+        }
+        .discount-num {
+          font-size: 36px;
+        }
+        .discount-pct,
+        .discount-off {
+          font-size: 16px;
+        }
+        .card-brand {
+          font-size: 14px;
+        }
+
+        .tora-badge {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .benefits-grid {
+          gap: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ══ HERO ══════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-title">RED TORA</div>
+        <!-- <div class="hero-subtitle">RED DE BENEFICIOS</div> -->
+        <div class="hero-tagline">MARCAS QUE ACOMPAÑAN A NUESTRA COMUNIDAD</div>
+      </div>
+    </section>
+
+    <!-- ══ FILTERS ════════════════════════════════════════════ -->
+    <nav class="filters" aria-label="Categorías">
+      <button class="filter-btn active" data-filter="todas">Todas</button>
+      <button class="filter-btn" data-filter="gastronomia">Gastronomía</button>
+      <button class="filter-btn" data-filter="hogar">Hogar</button>
+      <button class="filter-btn" data-filter="indumentaria">
+        Indumentaria
+      </button>
+    </nav>
+
+    <!-- ══ BENEFITS GRID ══════════════════════════════════════ -->
+    <section class="benefits-section">
+      <div class="benefits-grid" id="grid">
+        <!-- ── Card 1: BaGreen ──────────────────────────── -->
+        <article class="card" data-category="gastronomia">
+          <span class="tora-badge">Gastronomía</span>
+          <img src="assets/bagreen.jpeg" alt="BaGreen — Beneficio TORA" />
+        </article>
+
+        <!-- ── Card 2: Panera Rosa ───────────────────────── -->
+        <article class="card" data-category="gastronomia">
+          <span class="tora-badge">Gastronomía</span>
+          <img
+            src="assets/panerarosa.jpeg"
+            alt="Panera Rosa — Beneficio TORA"
+          />
+        </article>
+
+        <!-- ── Card 3: Vera del Río ──────────────────────── -->
+        <article class="card" data-category="gastronomia">
+          <span class="tora-badge">Gastronomía</span>
+          <img
+            src="assets/veradelrio.jpeg"
+            alt="Vera del Río — Beneficio TORA"
+          />
+        </article>
+
+        <!-- ── Card 4: Erisa ─────────────────────────────── -->
+        <article class="card" data-category="indumentaria">
+          <span class="tora-badge">Indumentaria</span>
+          <img src="assets/erisa.jpeg" alt="Erisa — Beneficio TORA" />
+        </article>
+
+        <!-- ── Card 5: Hilachada ─────────────────────────── -->
+        <article class="card" data-category="hogar">
+          <span class="tora-badge">Hogar</span>
+          <img src="assets/hilachada.jpeg" alt="Hilachada — Beneficio TORA" />
+        </article>
+
+        <!-- ── Card 6: Honua ─────────────────────────────── -->
+        <article class="card" data-category="hogar">
+          <span class="tora-badge">Hogar</span>
+          <img src="assets/honua.jpeg" alt="Honua — Beneficio TORA" />
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ LIGHTBOX ══════════════════════════════════════════ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button class="lightbox-close" id="lb-close" aria-label="Cerrar">&times;</button>
+      <button class="lb-nav" id="lb-prev" aria-label="Anterior">&#8249;</button>
+      <img id="lb-img" src="" alt="" />
+      <button class="lb-nav" id="lb-next" aria-label="Siguiente">&#8250;</button>
+    </div>
+
+    <script>
+      // ── Filters ──────────────────────────────────────────
+      const buttons = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".card");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+          cards.forEach((card) => {
+            const match =
+              filter === "todas" || card.dataset.category === filter;
+            card.classList.toggle("hidden", !match);
+          });
+        });
+      });
+
+      // ── Lightbox ─────────────────────────────────────────
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lb-img");
+      const lbClose = document.getElementById("lb-close");
+      const lbPrev = document.getElementById("lb-prev");
+      const lbNext = document.getElementById("lb-next");
+
+      let currentIndex = 0;
+
+      function visibleCards() {
+        return [...cards].filter((c) => !c.classList.contains("hidden"));
+      }
+
+      function openLightbox(index) {
+        const visible = visibleCards();
+        currentIndex = index;
+        const img = visible[currentIndex].querySelector("img");
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbPrev.disabled = currentIndex === 0;
+        lbNext.disabled = currentIndex === visible.length - 1;
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const visible = visibleCards();
+          openLightbox(visible.indexOf(card));
+        });
+      });
+
+      lbPrev.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (currentIndex > 0) openLightbox(currentIndex - 1);
+      });
+
+      lbNext.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (currentIndex < visibleCards().length - 1) openLightbox(currentIndex + 1);
+      });
+
+      lbClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft" && lightbox.classList.contains("open")) lbPrev.click();
+        if (e.key === "ArrowRight" && lightbox.classList.contains("open")) lbNext.click();
+      });
+    </script>
+  </body>
+</html>
