@@ -28,7 +28,7 @@ body {
 .hero {
   position: relative;
   height: 300px;
-  background: url("assets/fondo2.png") center/cover no-repeat;
+  background: url("../assets/fondo2.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
