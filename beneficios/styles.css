@@ -9,6 +9,7 @@
   --white: #ffffff;
   --dark: #1a1a1a;
   --font-main: "Bebas", sans-serif;
+  --font-subtitles: "Barlow Condensed", sans-serif;
 }
 
 *,
@@ -34,7 +35,7 @@ body {
 .hero {
   position: relative;
   height: 300px;
-  background: url("../assets/fondo2.png") center/cover no-repeat;
+  background: url("../assets/fondo.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,27 +52,14 @@ body {
 .hero-title {
   font-size: clamp(72px, 13vw, 120px);
   color: var(--pink);
-  letter-spacing: 1px;
   font-weight: 600;
   line-height: 1;
-  text-shadow:
-    0 0 6px rgba(255, 62, 181, 0.1),
-    0 0 15px rgba(255, 62, 181, 0.1),
-    0 0 30px rgba(255, 62, 181, 0.1),
-    0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.hero-subtitle {
-  font-size: clamp(26px, 5vw, 46px);
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: clamp(3px, 1vw, 6px);
-  margin-top: 6px;
-  text-transform: uppercase;
+  text-shadow: 0 0 50px #000000;
 }
 
 .hero-tagline {
-  font-size: clamp(16px, 2.2vw, 22px);
+  font-family: var(--font-subtitles);
+  font-size: clamp(40px, 3vw, 40px);
   color: rgba(255, 255, 255, 0.82);
   margin-top: 8px;
   font-style: normal;
@@ -96,6 +84,7 @@ body {
 }
 
 .filter-btn {
+  font-family: var(--font-subtitles);
   padding: 7px 10px;
   border-radius: 50px;
   border: 1px solid #ccc;
@@ -104,11 +93,11 @@ body {
   font-size: 13px;
   font-weight: 500;
   color: #666;
+  text-transform: uppercase;
   transition:
     background 0.18s,
     border-color 0.18s,
     color 0.18s;
-  font-family: var(--font-main);
 }
 
 .filter-btn.active {
@@ -157,6 +146,7 @@ body {
 /* TORA badge */
 .tora-badge {
   position: absolute;
+  font-family: var(--font-subtitles);
   top: 0;
   left: 0;
   background: var(--pink);

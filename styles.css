@@ -4,6 +4,13 @@
   font-display: swap;
 }
 
+:root {
+  --font-main: "Bebas", sans-serif;
+  --font-subtitles: "Barlow Condensed", sans-serif;
+  --pink: #ff3eb5;
+  --white: #ffffff;
+}
+
 *,
 *::before,
 *::after {
@@ -13,10 +20,10 @@
 }
 
 body {
-  font-family: "Bebas", sans-serif;
+  font-family: var(--font-main);
   background-image: url("assets/fondo.png");
   background-size: cover;
-  background-position: center;
+  background-position: 70% center;
   background-repeat: no-repeat;
 }
 
@@ -31,10 +38,30 @@ body {
 }
 
 /* ─── LOGO ─── */
+.logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-tagline {
+  font-family: var(--font-subtitles);
+  font-size: clamp(14px, 4.5vw, 38px);
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.3),
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
 .logo {
-  font-size: clamp(80px, 20vw, 130px);
+  font-size: clamp(72px, 13vw, 120px);
   font-weight: 900;
-  color: #ff3eb2;
+  color: var(--pink);
   letter-spacing: 12px;
   text-transform: uppercase;
   line-height: 1;
@@ -67,7 +94,6 @@ body {
 }
 
 /* ─── BOTONES FLOTANTES ─── */
-.instagram-float,
 .whatsapp-float {
   position: fixed;
   right: 28px;
@@ -157,4 +183,3 @@ body {
 .lightbox__close:hover {
   opacity: 1;
 }
-
