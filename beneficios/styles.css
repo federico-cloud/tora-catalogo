@@ -49,7 +49,6 @@ body {
 }
 
 .hero-title {
-  font-family: "Barlow Condensed", sans-serif;
   font-size: clamp(72px, 13vw, 120px);
   color: var(--pink);
   letter-spacing: 1px;
@@ -63,7 +62,6 @@ body {
 }
 
 .hero-subtitle {
-  font-family: "Oswald", sans-serif;
   font-size: clamp(26px, 5vw, 46px);
   font-weight: 700;
   color: var(--white);
@@ -73,7 +71,6 @@ body {
 }
 
 .hero-tagline {
-  font-family: "Oswald", sans-serif;
   font-size: clamp(16px, 2.2vw, 22px);
   color: rgba(255, 255, 255, 0.82);
   margin-top: 8px;
