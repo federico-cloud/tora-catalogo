@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/Bebas-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root {
   --pink: #ff3eb5;
   --white: #ffffff;
   --dark: #1a1a1a;
-  --font-main: "Arial", "Helvetica Neue", sans-serif;
+  --font-main: "Bebas", sans-serif;
 }
 
 *,
@@ -34,14 +40,6 @@ body {
   justify-content: center;
   padding: 64px 20px 56px;
   overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  pointer-events: none;
 }
 
 .hero-content {
@@ -252,11 +250,20 @@ body {
   user-select: none;
 }
 
-.lb-nav:hover { opacity: 1; }
-.lb-nav:disabled { opacity: 0.15; cursor: default; }
+.lb-nav:hover {
+  opacity: 1;
+}
+.lb-nav:disabled {
+  opacity: 0.15;
+  cursor: default;
+}
 
-#lb-prev { left: 8px; }
-#lb-next { right: 8px; }
+#lb-prev {
+  left: 8px;
+}
+#lb-next {
+  right: 8px;
+}
 
 /* ── RESPONSIVE ───────────────────────────────────── */
 @media (max-width: 768px) {
