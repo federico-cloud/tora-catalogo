@@ -1,15 +1,9 @@
-@font-face {
-  font-family: "Bebas";
-  src: url("/fonts/Bebas-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
 :root {
   --pink: #ff3eb5;
   --white: #ffffff;
   --dark: #1a1a1a;
-  --font-main: "Bebas", sans-serif;
-  --font-subtitles: "Barlow Condensed", sans-serif;
+  --font-main: "Big Shoulders Display", sans-serif;
+  --font-subtitles: "DM Sans", sans-serif;
 }
 
 *,

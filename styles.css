@@ -1,12 +1,6 @@
-@font-face {
-  font-family: "Bebas";
-  src: url("fonts/Bebas-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
 :root {
-  --font-main: "Bebas", sans-serif;
-  --font-subtitles: "Barlow Condensed", sans-serif;
+  --font-main: "Big Shoulders Display", sans-serif;
+  --font-subtitles: "DM Sans", sans-serif;
   --pink: #ff3eb5;
   --white: #ffffff;
 }
@@ -60,12 +54,10 @@ body {
 
 .logo {
   font-size: clamp(72px, 13vw, 120px);
-  font-weight: 900;
-  color: var(--pink);
-  letter-spacing: 12px;
+  font-weight: 100;
+  color: var(--white);
   text-transform: uppercase;
-  line-height: 1;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 0 50px #000000;
 }
 
