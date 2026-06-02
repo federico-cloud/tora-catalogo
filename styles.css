@@ -183,6 +183,7 @@ body {
 .footer {
   background-color: transparent;
   color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .footer__inner {
@@ -213,6 +214,7 @@ body {
 .footer__brand-title {
   font-family: var(--font-main);
   font-size: 3rem;
+  font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--pink);
@@ -223,7 +225,7 @@ body {
 
 .footer__brand-tagline {
   font-family: var(--font-subtitles);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -232,7 +234,7 @@ body {
 
 .footer__section-title {
   font-family: var(--font-main);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #fff;
@@ -249,7 +251,7 @@ body {
 
 .footer__list a {
   font-family: var(--font-subtitles);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   display: flex;
@@ -270,7 +272,7 @@ body {
 
 .footer__contact a {
   font-family: var(--font-subtitles);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   display: flex;
@@ -307,7 +309,7 @@ body {
 
 .footer__copy {
   font-family: var(--font-subtitles);
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.7);
 }
 
