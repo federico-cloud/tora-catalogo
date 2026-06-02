@@ -31,6 +31,25 @@ body {
   color: var(--dark);
 }
 
+/* ── BACK LINK ────────────────────────────────────── */
+.back-link {
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  z-index: 200;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--pink);
+}
+
 /* ── HERO ─────────────────────────────────────────── */
 .hero {
   position: relative;
