@@ -33,9 +33,10 @@ body {
 
 /* ─── LOGO ─── */
 .logo-group {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
 }
 
@@ -118,30 +119,16 @@ body {
     box-shadow 0.2s;
 }
 
-.instagram-float {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  bottom: 98px;
-}
-
 .whatsapp-float {
   background: #25d366;
   bottom: 28px;
 }
 
-.instagram-float:hover,
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.instagram-float svg,
 .whatsapp-float svg {
   width: 32px;
   height: 32px;
@@ -324,24 +311,3 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer__legal {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer__legal a {
-  font-family: var(--font-subtitles);
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer__legal a:hover {
-  color: var(--pink);
-}
-
-.footer__legal span {
-  color: rgba(255, 255, 255, 0.3);
-}

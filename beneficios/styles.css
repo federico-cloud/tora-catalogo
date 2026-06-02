@@ -271,12 +271,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
-  .card-brand {
-    font-size: 16px;
-  }
-  .discount-num {
-    font-size: 42px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -290,16 +284,6 @@ body {
   }
   .benefits-section {
     padding: 12px;
-  }
-  .discount-num {
-    font-size: 36px;
-  }
-  .discount-pct,
-  .discount-off {
-    font-size: 16px;
-  }
-  .card-brand {
-    font-size: 14px;
   }
   .tora-badge {
     display: none;
