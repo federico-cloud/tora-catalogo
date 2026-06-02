@@ -72,18 +72,33 @@ body {
 }
 
 .seccion__titulo {
+  width: 100%;
   font-size: clamp(28px, 8vw, 52px);
   font-weight: 900;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-align: center;
+  text-align: left;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .seccion__imagen {
   width: 100%;
   border-radius: 16px;
   display: block;
+}
+
+.seccion__img-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.seccion__titulo--overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* ─── BOTONES FLOTANTES ─── */
