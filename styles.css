@@ -137,8 +137,8 @@ body {
 /* ─── FOOTER ─── */
 .footer {
   background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
