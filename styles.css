@@ -46,7 +46,7 @@ body {
   color: var(--white);
   text-transform: uppercase;
   text-align: left;
-  text-shadow: 0 0 50px #000000;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* ─── SECCIÓN ─── */
@@ -132,6 +132,39 @@ body {
 
 .lightbox__close:hover {
   opacity: 1;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+  padding: 0 16px;
+  user-select: none;
+}
+
+.lb-nav:hover {
+  opacity: 1;
+}
+
+.lb-nav:disabled {
+  opacity: 0.15;
+  cursor: default;
+}
+
+#lb-prev {
+  left: 8px;
+}
+
+#lb-next {
+  right: 8px;
 }
 
 /* ─── FOOTER ─── */
