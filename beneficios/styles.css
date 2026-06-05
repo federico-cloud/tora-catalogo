@@ -56,7 +56,6 @@ body {
   color: var(--white);
   font-weight: 900;
   letter-spacing: 6px;
-  line-height: 1;
   text-transform: uppercase;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
@@ -280,9 +279,6 @@ body {
 .footer__inner {
   position: relative;
   z-index: 2;
-}
-
-.footer__inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 3.5rem 1.5rem;
@@ -429,7 +425,6 @@ body {
     max-height: 280px;
   }
   .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
   .benefits-section {
