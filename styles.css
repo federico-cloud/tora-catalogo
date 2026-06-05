@@ -138,15 +138,16 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
+  background: rgba(255, 255, 255, 0.08);
   border: none;
+  border-radius: 6px;
   color: #fff;
   font-size: 48px;
   line-height: 1;
   cursor: pointer;
   opacity: 0.7;
-  transition: opacity 0.15s;
-  padding: 0 16px;
+  transition: opacity 0.15s, background 0.15s;
+  padding: 8px 16px;
   user-select: none;
 }
 
