@@ -7,7 +7,10 @@
       "Bash(git branch *)",
       "Bash(git remote *)",
       "Bash(git push *)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('assets/silhome.jpeg','assets/hybrid.png','assets/carlitos.png','assets/hilachada.jpeg','assets/honua.jpeg','assets/mendizabal.png','assets/terraza.png','assets/fitboom.jpg'\\); foreach \\($f in $files\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $f\\)\\); \"{0}: {1}x{2} ratio={3}\" -f $f, $img.Width, $img.Height, [math]::Round\\($img.Width/$img.Height,3\\); $img.Dispose\\(\\) })"
     ]
   }
 }
