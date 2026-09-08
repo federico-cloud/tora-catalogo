@@ -1,6 +1,7 @@
 const images = [
-  { src: "../assets/empresas/plan.png", alt: "Plan Empresas" },
+  { src: "../assets/actividades.jpeg", alt: "Actividades" },
   { src: "../assets/empresas/horarios.png", alt: "Horarios" },
+  { src: "../assets/empresas/plan.png", alt: "Plan Empresas" },
 ];
 
 const lightbox = document.getElementById("lightbox");
@@ -26,9 +27,7 @@ function closeLightbox() {
 }
 
 document.querySelectorAll(".seccion__imagen").forEach((img) => {
-  img.addEventListener("click", () =>
-    openLightbox(Number(img.dataset.index)),
-  );
+  img.addEventListener("click", () => openLightbox(Number(img.dataset.index)));
 });
 
 document.getElementById("lb-close").addEventListener("click", closeLightbox);
