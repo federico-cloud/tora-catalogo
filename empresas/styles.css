@@ -64,6 +64,10 @@ body {
   cursor: zoom-in;
 }
 
+.seccion__imagen--sin-radio {
+  border-radius: 0;
+}
+
 /* ─── BOTONES FLOTANTES ─── */
 .whatsapp-float {
   position: fixed;
