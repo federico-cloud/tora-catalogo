@@ -1,5 +1,5 @@
 const images = [
-  { src: "../assets/empresas/plan.png", alt: "Actividades" },
+  { src: "../assets/empresas/plan.png", alt: "Plan Empresas" },
   { src: "../assets/empresas/horarios.png", alt: "Horarios" },
 ];
 
