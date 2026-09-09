@@ -1,7 +1,7 @@
 const images = [
   { src: "/assets/actividades.jpeg", alt: "Actividades" },
-  { src: "../assets/empresas/horarios.png", alt: "Horarios" },
-  { src: "../assets/empresas/plan.png", alt: "Plan Empresas" },
+  { src: "/assets/empresas/horarios.png", alt: "Horarios" },
+  { src: "/assets/empresas/plan.png", alt: "Plan Empresas" },
 ];
 
 const lightbox = document.getElementById("lightbox");
